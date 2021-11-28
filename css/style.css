@@ -1,0 +1,74 @@
+@import url(./normalize.css);
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+body{
+  display: flex;justify-content: center;align-items: center;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://images.unsplash.com/photo-1467810563316-b5476525c0f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1349&q=80);
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  font-family: 'Outfit', sans-serif;
+}
+.year{
+  position: absolute;
+  bottom: 1%;
+  margin: 0 auto;
+  font-size: 12rem;
+  opacity: .2;
+  line-height: 1.2;
+}
+main{
+  z-index: 1;
+  display: flex;justify-content: center;align-items: center;
+  flex-direction: column;
+}
+h1{
+  font-size: 3rem;
+  text-align: center;
+}
+.countdown{
+  display: flex;justify-content: center;align-items: center;
+  gap: 3rem;
+  text-align: center;
+  
+}
+.time-section *:nth-child(1){
+  font-size: 3rem;
+  font-weight: 600;
+}
+.time{
+  font-size: 1.5rem;
+}
+.copyright{
+  position: absolute;
+  top: 3px;
+  text-align: center;
+  font-size: .9rem;
+}
+.copyright a{
+  margin-left: 5px;
+  color: #fff;
+}
+.copyright a:hover{
+  color: #ddd;
+}
+
+@media (max-width: 500px) {
+  .countdown{
+    flex-direction: column;
+    gap: 5px;
+  }
+  h1{
+    font-size: 2.5rem;
+  }
+  .time-section *:nth-child(1){
+    font-size: 2.5rem;
+  }
+  .time{
+    font-size: 1.2rem;
+  }
+  .year{
+    font-size: calc(2rem + 30vw);
+    bottom: 50%;
+    transform: translateY(50%);
+  }
+}
